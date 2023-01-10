@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./styles/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="main">
+                <h1 class="main__title">Check live foreign currency exchange rates</h1>
+                <div class="main__wrapper">
+                    <div class="tabs">
+                        <div class="tabs__tab active">
+                            <div class="tabs__tab-icon">
+                                <img src="./images/convert.svg" alt="icon">
+                            </div>
+                            <div class="tabs__tab-title">
+                                Convert
+                            </div>
+                        </div>
+                        <div class="tabs__tab">
+                            <div class="tabs__tab-icon">
+                                <img src="./images/single.svg" alt="icon">
+                            </div>
+                            <div class="tabs__tab-title">
+                                Single
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="content">
+                        <form action="#" class="form">
+                            <div class="form__inputs">
+                                <div class="form__group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number"
+                                           name="amount" 
+                                           id="amount"
+                                           required
+                                           placeholder="1.00"
+                                    />
+                                </div>
+                                <div class="form__select">
+                                    <label for="from">From</label>
+                                    <select class="select" name="from" id="from" required>
+                                        <option value="" disabled selected hidden>
+                                            Choose currency
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form__select select-icon">
+                                    <img src="./images/icon-converting.png" alt="icon select">
+                                </div>
+                                <div class="form__select">
+                                    <label for="to">To</label>
+                                    <select class="select" name="to" id="to" required>
+                                        <option value="" disabled selected hidden>
+                                            Choose currency
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="form__info">
+                                <div class="form__info-loader">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="form__info-group show">
+                                    <div class="form__info-result from" id="resultFrom">
+                                        
+                                    </div>
+        
+                                    <div class="form__icon-result">
+                                        <img src="./images/icon-result.svg" alt="result">
+                                    </div>
+        
+                                    <div class="form__info-result to" id="resultTo">
+                                        
+                                    </div>
+                                </div>
+                                <div class="form__submit-btn">
+                                    <button type="submit" class="form__submit">
+                                        Convert
+                                    </button>
+                                </div>  
+                            </div>
+    
+                            <div class="rate-information">
+                                <div class="rate-conversion"></div>
+                                <div class="rate-last"> </div>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="content currency">
+                        <div class="currency__wrapper">
+                            <div class="currency__single">
+                                <select class="select" name="from" id="singleselect">
+                                    <option value="" disabled selected hidden>
+                                        Choose currency
+                                    </option>
+                                </select>
+    
+                                <div class="currency__single-items">
+                                    <div class="currency__item currency-current">
+                                        <div class="currency__item-titles">
+                                            <span class="currency__item-title">USD</span>
+                                            <span class="currency__item-fullname">American dollar</span>
+                                        </div>
+                                        <div class="currency__item-amount">
+                                            1.00
+                                        </div>
+                                        <div class="currency__action">
+                                            <button class="currency__change currency-btn">
+                                                Change
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="currency-list">
+                                <div class="currency__item">
+                                    <div class="currency__item-titles">
+                                        <span class="currency__item-title">USD</span>
+                                        <span class="currency__item-fullname">American dollar</span>
+                                    </div>
+                                    <div class="currency__item-amount">
+                                        2.00
+                                    </div>
+                                    <div class="currency__action">
+                                        <button class="currency__remove currency-btn">
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="currency__item">
+                                    <div class="currency__item-titles">
+                                        <span class="currency__item-title">USD</span>
+                                        <span class="currency__item-fullname">American dollar</span>
+                                    </div>
+                                    <div class="currency__item-amount">
+                                        2.00
+                                    </div>
+                                    <div class="currency__action">
+                                        <button class="currency__remove currency-btn">
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div></div>
+                        <div class="currency__add">
+                            <button class="currency__add-btn">
+                                Add currency
+                            </button>
+                            <select class="select" id="addCurrencySelect">
+                                <option value="" disabled selected hidden>
+                                    Choose currency
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+   
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <script type="module"src="./js/index.js"></script>
+    <script type="module"src="./js/events.js"></script>
+</body>
+</html>
