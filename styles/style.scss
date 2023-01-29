@@ -218,6 +218,7 @@ input[type="number"] {
             align-items: flex-end;
             font-size: 1.6rem;
             width: 24rem;
+            cursor: pointer;
             @media (max-width: 1100px) {
                 width: 100%;
             }

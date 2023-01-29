@@ -1,8 +1,8 @@
 import { fetchCodes } from "././index.js";
 import { handleInput, handleSubmit } from "./convert.js";
-import variebles from "./variebles.js";
+import variables from "./variables.js";
 
-const { amountInput, form } = variebles;
+const { amountInput, form } = variables;
 
 fetchCodes();
 
